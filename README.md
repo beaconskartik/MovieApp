@@ -1,0 +1,45 @@
+# MovieApp
+
+REAMME.md
+
+What all is covered in this App
+=====================================
+- Reactive programming 
+- Use of Rx Java and Retrofit to fetch the movies
+- Separate library which will act as SDK to get the data like fetching list/movie details/reviews
+- App support movieDB API to fetch the list of latest movie
+- App have full support of pagination
+- smooth scrolling, recycler-view, card-view has been used.
+- App support latest material design
+- App support endless scrolling feature
+- App support search feature (only year wise you can search [filter])
+- App support basic details of every movie
+
+Assumptions
+===========
+1) App assume that it will be tested when there will be a internet connection, offline cases I haven't handle
+2) Minimum SDK 19 and Compile and Target SDK 26
+3) I have tested this App in Mobile phone (Nexus 5X) only
+
+How to Run this project
+=======================
+1) Open build.gradle file in Android Studio, whole will be automatically imported to Android Studio and then you can run and build
+
+2) Via command line
+Go to root directory i.e MovieApp and run ./gradlew task and you will get a list of task and run any of the task
+for example if you want to build apk then ./gradlew assemble
+
+Technical Details
+=================
+1) API package have all the information about API URL take from https://www.themoviedb.org/documentation/api
+2) API's give their response in JSON format and there is a JSON parser which parse the information and store the information in a model
+3) Once I collect sufficient information, I am calling adapter to show it to user via recycler view
+4) I have used only one activity in this model and rest is governed by fragment.
+5) For fetching poster banner, I am using picasso library.
+
+Things To DO
+============
+1) Caching via SQL or stroing it in JSON format as a text file
+2) Error handling of the API
+3) UI Design tweaking
+4) bug fixing
