@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "API_KEY", "\"69d79017c4cc8d3670e59f674325b899\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+ext {
+    supportLibVersion = "27.0.2"
+    retrofitVersion = "2.3.0"
+    retrofitRxJavaVersion = "2.1.0"
+    rxjavaVersion = "1.1.8"
+    rxandroidVersion = "1.2.1"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:support-annotations:$supportLibVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofitRxJavaVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "io.reactivex:rxjava:$rxjavaVersion"
+}

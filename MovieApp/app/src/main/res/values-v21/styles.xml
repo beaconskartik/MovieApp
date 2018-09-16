@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Movie.ProgressBarStyle" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">#448AFF</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+        <item name="android:indeterminateTint">#448AFF</item>
+    </style>
+</resources>
+
